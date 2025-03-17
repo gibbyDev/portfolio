@@ -1,5 +1,5 @@
-# Use an official Node.js runtime as a parent image
-FROM node:14
+# Use a Node.js version that is compatible with Next.js
+FROM node:18.17.0
 
 # Set the working directory
 WORKDIR /app
@@ -16,5 +16,5 @@ COPY . .
 # Expose the port the app runs on
 EXPOSE 3000
 
-# Define the command to run the app
-CMD ["npm", "start"]
+# Start the application in development mode
+CMD ["npm", "run", "dev"]

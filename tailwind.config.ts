@@ -31,16 +31,16 @@ const config = {
           DEFAULT: "#000",
           100: "#161616",
           200: "#202020",
-          300: "rgba(255, 255, 255, 0.125)",
+          300: "rgba(140, 197, 7, 0.13)",
         },
         white: {
           DEFAULT: "#FFF",
           100: "#BEC1DD",
           200: "#C1C2D3",
         },
-        // blue: {
-        //   "100": "#E4ECFF",
-        // },
+        gold: {
+          "100": "rgb(197, 184, 7)",
+        },
         green: "#108A00",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
