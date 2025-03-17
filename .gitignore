@@ -28,9 +28,7 @@ yarn-error.log*
 # local env files
 .env*.local
 /.vscode/
-/.github/
-deploy-development.yml
-deploy-production.yml
+
 
 # vercel
 .vercel
