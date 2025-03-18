@@ -1,5 +1,5 @@
 # Use a Node.js version that is compatible with Next.js
-FROM node:18.17.0
+FROM node:18-alpine AS builder
 
 # Set the working directory
 WORKDIR /app
@@ -13,8 +13,20 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
+# Build the application
+RUN npm run build
+
+# Use a smaller base image for the final stage
+FROM node:18-alpine
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the built application from the builder stage
+COPY --from=builder /app ./
+
 # Expose the port the app runs on
 EXPOSE 3000
 
-# Start the application in development mode
+# Start the application in production mode
 CMD ["npm", "start"]
