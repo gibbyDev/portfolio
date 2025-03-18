@@ -6,8 +6,8 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - NODE_ENV=development  # Use production environment for consistency
+      - NODE_ENV=production  # Use production environment for consistency
     volumes:
       - .:/app
       - /app/node_modules
-    command: /bin/sh -c "npm run build && npm start"
+    command: npm start
