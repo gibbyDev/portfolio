@@ -34,4 +34,4 @@ jobs:
 
     - name: Deploy to Development Server
       run: |
-        ssh -o StrictHostKeyChecking=no dev@192.168.0.128 "docker pull gibbydev/development-image:latest && docker-compose -f docker-compose.dev.yml up -d"
+        ssh -o StrictHostKeyChecking=no -p 22 dev@192.168.0.128 "docker pull gibbydev/development-image:latest && docker-compose -f docker-compose.dev.yml up -d"
