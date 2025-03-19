@@ -8,13 +8,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install --frozen-lockfile
+RUN npm install
 
 # Copy the rest of the application code
 COPY . .
 
 # Build the application
-RUN npm run build && ls -lah .next  # Debugging to ensure .next exists
+RUN npm run build
 
 # Use a smaller base image for the final stage
 FROM node:18-alpine
@@ -23,15 +23,15 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Copy the built application from the builder stage
-COPY --from=builder /app/.next /app/.next
-COPY --from=builder /app/package*.json /app/
-COPY --from=builder /app/public /app/public
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/public ./public
 
 # Install only production dependencies
-RUN npm install --only=production --frozen-lockfile
+RUN npm install --only=production
 
 # Expose the port the app runs on
 EXPOSE 3000
 
 # Start the application in production mode
-CMD ["npx", "next", "start"]
+CMD ["npm", "start"]
