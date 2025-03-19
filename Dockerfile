@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the application
-RUN npm run build
+RUN npm run build && ls -lah .next  # Debugging to ensure .next exists
 
 # Use a smaller base image for the final stage
 FROM node:18-alpine
