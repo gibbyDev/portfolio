@@ -79,6 +79,8 @@ jobs:
             git pull origin development
             echo "Pulling latest Docker image..."
             docker pull gibbydev/development-image:latest
+            echo "Stopping and removing existing container if running..."
+            docker compose -f docker-compose.dev.yml down
             echo "Starting Docker containers..."
             docker compose -f docker-compose.dev.yml up -d
             echo "Deployment to development server completed."
