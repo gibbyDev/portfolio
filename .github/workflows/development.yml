@@ -59,7 +59,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    # needs: [filter, build]
+#     needs: [filter, build]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -81,6 +81,8 @@ jobs:
             docker pull gibbydev/development-image:latest
             echo "Stopping and removing existing container if running..."
             docker compose -f docker-compose.dev.yml down
+            echo "Building the application..."
+            docker compose -f docker-compose.dev.yml build
             echo "Starting Docker containers..."
             docker compose -f docker-compose.dev.yml up -d
             echo "Deployment to development server completed."
