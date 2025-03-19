@@ -6,9 +6,25 @@ on:
       - development
 
 jobs:
+  filter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Filter changes
+        id: filter
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            docker:
+              - 'Dockerfile'
+              - 'docker-compose.dev.yml'
+
   build:
     runs-on: ubuntu-latest
-
+    needs: filter
+    if: needs.filter.outputs.docker == 'true'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -40,6 +56,13 @@ jobs:
         run: |
           docker build -t gibbydev/development-image:latest .
           docker push gibbydev/development-image:latest
+
+  deploy:
+    runs-on: ubuntu-latest
+    # needs: [filter, build]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Add SSH key
         uses: webfactory/ssh-agent@v0.5.3
