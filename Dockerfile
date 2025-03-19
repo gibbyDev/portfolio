@@ -30,6 +30,9 @@ COPY --from=builder /app/public ./public
 # Install only production dependencies
 RUN npm install --only=production
 
+# Verify the contents of the .next directory
+RUN ls -lah .next  # Debugging to ensure .next is copied correctly
+
 # Expose the port the app runs on
 EXPOSE 3000
 
