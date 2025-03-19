@@ -47,12 +47,24 @@ jobs:
         run: |
           echo "Starting deployment to development server..."
           ssh -o StrictHostKeyChecking=no -p 2222 dev@71.213.133.168 << 'EOF'
+            set -e
             cd /home/dev/portfolio
+            echo "Pulling latest Docker image..."
             docker pull gibbydev/development-image:latest
+            echo "Starting Docker containers..."
             docker compose -f docker-compose.dev.yml up -d
             echo "Deployment to development server completed."
             echo "Checking container status..."
             docker ps -a
             echo "Fetching container logs..."
-            docker logs portfolio-app-1
+            docker logs portfolio-app-1 || true
+            echo "Checking for exited containers..."
+            if [ "$(docker ps -a -f status=exited -q)" ]; then
+              echo "Exited containers found. Fetching logs..."
+              docker ps -a -f status=exited
+              docker logs portfolio-app-1
+              exit 1
+            else
+              echo "No exited containers found."
+            fi
           EOF
