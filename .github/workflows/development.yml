@@ -66,6 +66,8 @@ jobs:
               echo "Exited containers found. Fetching logs..."
               docker ps -a -f status=exited
               docker logs portfolio-app-1
+              echo "Checking .next directory contents..."
+              docker exec portfolio-app-1 ls -lah /app/.next
               exit 1
             else
               echo "No exited containers found."
