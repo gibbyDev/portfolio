@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - development
+    paths:
+      - 'Dockerfile'
+      - 'docker-compose.dev.yml'
+      - '.github/workflows/development.yml'
 
 jobs:
   build:
@@ -37,6 +41,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push Docker image
+        if: github.event_name == 'push' && (github.event.head_commit.modified contains 'Dockerfile' || github.event.head_commit.modified contains 'docker-compose.dev.yml')
         run: |
           docker build -t gibbydev/development-image:latest .
           docker push gibbydev/development-image:latest
@@ -55,7 +60,7 @@ jobs:
             echo "Pulling latest Docker image..."
             docker pull gibbydev/development-image:latest
             echo "Starting Docker containers..."
-            docker compose -f docker-compose.dev.yml up -d
+            docker compose -f docker-compose.dev.yml up -d --build
             echo "Deployment to development server completed."
             echo "Checking container status..."
             docker ps -a
