@@ -75,6 +75,8 @@ jobs:
           ssh -o StrictHostKeyChecking=no -p 2222 dev@71.213.133.168 << 'EOF'
             set -e
             cd /home/dev/portfolio
+            echo "Pulling latest changes from development branch..."
+            git pull origin development
             echo "Pulling latest Docker image..."
             docker pull gibbydev/development-image:latest
             echo "Starting Docker containers..."
