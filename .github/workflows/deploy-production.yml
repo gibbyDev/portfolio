@@ -1,0 +1,44 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and push Docker image
+        run: |
+          if [ "${{ github.ref }}" == "refs/heads/main" ]; then
+            TAG="latest"
+          else
+            TAG="develop"
+          fi
+          docker build -t myapp:$TAG .
+          docker tag myapp:$TAG mydockerhubusername/myapp:$TAG
+          docker push mydockerhubusername/myapp:$TAG
+
+      - name: Deploy to server
+        run: |
+          if [ "${{ github.ref }}" == "refs/heads/main" ]; then
+            TAG="latest"
+          else
+            TAG="develop"
+          fi
+          ssh user@your-server-ip 'docker pull mydockerhubusername/myapp:$TAG && docker-compose -f docker-compose.$TAG.yml up -d'
