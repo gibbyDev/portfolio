@@ -60,19 +60,8 @@ jobs:
             cd /home/dev/portfolio
             docker compose -f docker-compose.dev.yml down
             docker pull gibbydev/development-image:latest
+            npm run build
             docker compose -f docker-compose.dev.yml up -d
             docker ps -a
-            echo "Fetching container logs..."
             docker logs portfolio-app-1 || true
-            echo "Checking for exited containers..."
-            if [ "$(docker ps -a -f status=exited -q)" ]; then
-              echo "Exited containers found. Fetching logs..."
-              docker ps -a -f status=exited
-              docker logs portfolio-app-1
-              echo "Checking .next directory contents..."
-              docker exec portfolio-app-1 ls -lah /app/.next
-              exit 1
-            else
-              echo "No exited containers found."
-            fi
           EOF
