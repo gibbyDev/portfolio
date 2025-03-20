@@ -54,13 +54,12 @@ jobs:
 
       - name: Deploy to Development Server
         run: |
-          echo "Starting deployment to development server..."
-          ssh -o StrictHostKeyChecking=no -p 2222 dev@71.213.133.168 << 'EOF'
+            echo "Starting deployment to development server..."
+            ssh -o StrictHostKeyChecking=no -p 2222 dev@71.213.133.168 << 'EOF'
             set -e
             cd /home/dev/portfolio
             git pull origin development
             docker compose -f docker-compose.dev.yml down
-            docker pull gibbydev/development-image:latest
             docker compose -f docker-compose.dev.yml build
             docker compose -f docker-compose.dev.yml up -d
-          EOF
+            EOF
