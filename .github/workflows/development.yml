@@ -60,6 +60,5 @@ jobs:
             cd /home/dev/portfolio
             git pull origin development
             docker compose -f docker-compose.dev.yml down
-            docker compose -f docker-compose.dev.yml build
             docker compose -f docker-compose.dev.yml up -d
             EOF
