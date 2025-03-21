@@ -39,12 +39,7 @@ const config = {
           200: "#C1C2D3",
         },
         gold: {
-<<<<<<< HEAD
           100: "rgb(197, 184, 7)",
-=======
-          "100": "#a5a200",
-        },
->>>>>>> 63f7ab3 (yes)
         },
         green: "#108A00",
         border: "hsl(var(--border))",
