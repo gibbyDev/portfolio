@@ -42,7 +42,7 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript", "ReactJS", "MongoDB"];
+  const leftLists = ["ReactJS", "NextJS", "Typescript", "", "Docker"];
   const rightLists = ["HTMX", "Tailwindcss", "GoLang"];
 
   const [copied, setCopied] = useState(false);
@@ -126,7 +126,7 @@ export const BentoGridItem = ({
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-green"
+                    lg:opacity-100 rounded-lg text-center bg-black"
                   >
                     {item}
                   </span>

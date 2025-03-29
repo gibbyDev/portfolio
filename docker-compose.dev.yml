@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    image: gibbydev/development-image:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production  # Use production environment for consistency
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm start
+    build:
+      context: .
+      dockerfile: Dockerfile

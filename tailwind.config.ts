@@ -39,7 +39,7 @@ const config = {
           200: "#C1C2D3",
         },
         gold: {
-          "100": "rgb(197, 184, 7)",
+          100: "rgb(197, 184, 7)",
         },
         green: "#108A00",
         border: "hsl(var(--border))",
