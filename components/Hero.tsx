@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import MagicButton from "./MagicButton";
 // import { AnimatedModalDemo } from "./AnimatedModalDemo";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { FiDownload } from "react-icons/fi";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
