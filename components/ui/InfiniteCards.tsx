@@ -74,7 +74,7 @@ export const InfiniteMovingCards = ({
       ref={containerRef}
       className={cn(
         // max-w-7xl to w-screen
-        "scroller relative z-20 w-screen overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 w-[60vw] overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
@@ -89,18 +89,11 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            //   change md:w-[450px] to md:w-[60vw] , px-8 py-6 to p-16, border-slate-700 to border-slate-800
             className="w-[60vw] bg-black-200 relative rounded-2xl border border-b-0
              flex-shrink-0 border-gold p-5 md:p-16 md:w-[60vw]"
             style={{
-              //   background:
-              //     "linear-gradient(180deg, var(--slate-800), var(--slate-900)", //remove this one
-              //   add these two
-              //   you can generate the color from here https://cssgradient.io/
-              width: "60vw",
-              // background: "rgb(4,7,29)",
+              width: "40vw",
             }}
-            // change to idx cuz we have the same name
             key={idx}
           >
             <blockquote>

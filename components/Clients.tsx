@@ -7,27 +7,25 @@ import { InfiniteMovingCards } from "./ui/InfiniteCards";
 
 const Clients = () => {
   return (
-    <section id="testimonials" className="py-5">
-      <h1 className="heading">
+    <section id="testimonials" className="py-5 relative">
+      <h1 className="heading mb-10">
         Kind words from
         <span className="text-green"> satisfied </span>
         clients
       </h1>
 
-      <div className="flex flex-col items-center max-lg:mt-10">
+      <div className="flex flex-col items-center">
         <InfiniteMovingCards items={testimonials} speed="slow" />
 
-        {/* <div
-          className="h-[50vh] md:h-[30rem] rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden"
-        >
+        <div className="h-[40vh] md:h-[25rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
           <InfiniteMovingCards
             items={testimonials}
             direction="right"
             speed="slow"
           />
-        </div> */}
+        </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
+        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16">
           {companies.map((company) => (
             <React.Fragment key={company.id}>
               <div className="flex md:max-w-60 max-w-32 gap-2">

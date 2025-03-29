@@ -1,11 +1,18 @@
-import { FiDownload } from "react-icons/fi";
+"use client";
 
+<<<<<<< HEAD
 import MagicButton from "./MagicButton";
 // import { AnimatedModalDemo } from "./AnimatedModalDemo";
+=======
+import { useState } from "react";
+import Modal from "./ui/Modal";
+>>>>>>> 30dbb95 (new)
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="h-[100vh] pb-20 pt-36">
       <div>
@@ -43,6 +50,7 @@ const Hero = () => {
           Hi! I&apos;m Cody, an experienced <span className="text-green"> Developer </span> with expertise in all of the best practices in <span className="text-green"> DevOps </span> Engineering
           </p>
 
+<<<<<<< HEAD
           {/* <AnimatedModalDemo> */}
             <MagicButton
               title="Resume"
@@ -50,6 +58,37 @@ const Hero = () => {
               position="right"
             />
           {/* </AnimatedModalDemo> */}
+=======
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="button-gradient px-5 py-2.5 rounded-lg text-white font-medium transition-all hover:scale-105"
+            >
+              Resume
+            </button>
+
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+              <div className="p-4 w-full h-[80vh]">
+                <div className="flex justify-between items-center mb-4">
+                  <h2 className="text-xl font-semibold">Resume</h2>
+                  <button
+                    onClick={() =>
+                      window.open("/path-to-your-resume.pdf", "_blank")
+                    }
+                    className="px-4 py-2 bg-green text-white rounded-md hover:bg-green/90 transition-colors"
+                  >
+                    Download PDF
+                  </button>
+                </div>
+                <iframe
+                  src="/path-to-your-resume.pdf#view=FitH"
+                  className="w-full h-full rounded-md"
+                  title="Resume"
+                />
+              </div>
+            </Modal>
+          </div>
+>>>>>>> 30dbb95 (new)
         </div>
       </div>
     </div>

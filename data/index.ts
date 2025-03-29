@@ -7,7 +7,7 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "I prioritize client collaboration and revision",
     description: "",
     className:
       "z-10 lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[70vh] bg-gradient-to-tr from-black to-transparent",
@@ -19,12 +19,12 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm very open to trying new technologies",
+    title: "I'm constantly updating my tech stack and infrastructure",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
-    img: "",
+    img: "/pngegg (1).png",
     spareImg: "",
   },
   {
@@ -50,7 +50,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a react component library",
+    title: "Currently building a DevOps Management System",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -60,7 +60,7 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Do you want to start a project together?",
+    title: "Do you want to build a project together?",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -72,14 +72,12 @@ export const gridItems = [
 
 export const testimonials = [
   {
-    quote:
-      " ",
+    quote: " ",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
   {
-    quote:
-      " ",
+    quote: " ",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
@@ -94,20 +92,19 @@ export const testimonials = [
     title: "Director of AlphaStream Technologies",
   },
   {
-    quote:
-      " ",
+    quote: " ",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
 ];
 
 export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
+  // {
+  //   id: 1,
+  //   name: "cloudinary",
+  //   img: "/cloud.svg",
+  //   nameImg: "/cloudName.svg",
+  // },
   {
     id: 2,
     name: "appwrite",
