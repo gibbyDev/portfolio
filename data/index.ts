@@ -50,11 +50,7 @@ export const gridItems = [
 
   {
     id: 5,
-<<<<<<< HEAD
-    title: "Currently building a DevOps Management System",
-=======
     title: "Currently building a robust modular CRM backend",
->>>>>>> 81d971aba06a1fb6c057026e7cc85246b759ba0b
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
