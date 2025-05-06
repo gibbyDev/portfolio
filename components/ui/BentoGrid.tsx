@@ -47,6 +47,14 @@ export const BentoGridItem = ({
 
   const [copied, setCopied] = useState(false);
 
+  const defaultOptions = {
+    loop: copied,
+    autoplay: copied,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   const handleCopy = () => {
     const text = "codygibbs432@gmail.com";
     navigator.clipboard.writeText(text);
@@ -56,77 +64,58 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
         className
       )}
       style={{
-        background:
-          "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent)", // Black to transparent gradient
+        background: "rgb(4,7,29)",
+        backgroundColor:
+          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
       <div
-        className={`${
-          id === 6 && "flex justify-center"
-        } bg-black-200 h-full relative`}
+        className={`${id === 6 && "flex justify-center"} bg-black-200 h-full`}
       >
-        {/* Image Background with Gradient Overlay */}
-        {img && (
-          <div className="absolute inset-0">
+        <div className="w-full h-full absolute">
+          {img && (
             <img
               src={img}
               alt={img}
-<<<<<<< HEAD
-              className={cn(
-                imgClassName,
-                "object-cover object-center w-full h-full"
-              )}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-          </div>
-        )}
-
-        {spareImg && (
-          <div
-            className={`absolute right-0 -bottom-5 ${
-              id === 5 && "w-full opacity-80"
-            }`}
-          >
-            <img
-              src={spareImg}
-              alt={spareImg}
-              className="object-cover object-center w-full h-full"
-=======
-              className={cn(imgClassName, "object-cover object-center z-0")}
+              className={cn(imgClassName, "object-cover object-center ")}
             />
           )}
         </div>
-        {/** Add the black gradient above the image for the first item */}
-        {(id === 1) && (
-          <div
-            className="absolute inset-0 bg-gradient-to-tr from-black to-transparent z-10 pointer-events-none"
-          ></div>
-        )}
         <div
           className={`absolute right-0 -bottom-5 ${
             id === 5 && "w-full opacity-80"
-          }`}
+          } `}
         >
           {spareImg && (
             <img
               src={spareImg}
               alt={spareImg}
-              className="object-cover object-center w-full h-full z-0"
->>>>>>> 62fd1b8 (added intro)
+              //   width={220}
+              className="object-cover object-center w-full h-full"
             />
-          </div>
-        )}
-
+          )}
+        </div>
         {id === 6 && (
           <BackgroundGradientAnimation>
             <div className="absolute z-0 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           </BackgroundGradientAnimation>
         )}
 
+        {id === 1 && (
+          <div className="absolute inset-0 bg-gradient-to-tr from-black to-transparent z-10 pointer-events-none"></div>
+        )}
+        {id === 2 && (
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+        )}
+        {id === 3 && (
+          <BackgroundGradientAnimation>
+            <div className="absolute z-0 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+          </BackgroundGradientAnimation>
+        )}
         <div
           className={cn(
             titleClassName,
@@ -137,7 +126,7 @@ export const BentoGridItem = ({
             {description}
           </div>
           <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold`}
+            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
           >
             {title}
           </div>
