@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import MagicButton from "./MagicButton";
-// import { AnimatedModalDemo } from "./AnimatedModalDemo";
+import { AnimatedModalDemo } from "./AnimatedModalDemo";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { FiDownload } from "react-icons/fi";
@@ -47,13 +47,12 @@ const Hero = () => {
           Hi! I&apos;m Cody, an experienced <span className="text-green"> Developer </span> with expertise in all of the best practices in <span className="text-green"> DevOps </span> Engineering
           </p>
 
-          {/* <AnimatedModalDemo> */}
+          
             <MagicButton
               title="Resume"
               icon={<FiDownload />}
               position="right"
             />
-          {/* </AnimatedModalDemo> */}
         </div>
       </div>
     </div>
