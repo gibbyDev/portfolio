@@ -52,6 +52,14 @@ const Hero = () => {
             title="Resume"
             icon={<FiDownload />}
             position="right"
+            handleClick={() => {
+              const link = document.createElement("a");
+              link.href = "/portfolio/data/resume.pdf";
+              link.download = "resume.pdf";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
           />
         </div>
       </div>
