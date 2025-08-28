@@ -33,7 +33,8 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex justify-center relative my-20 z-10">
+      {/* Move content up a bit more on mobile */}
+      <div className="flex justify-center relative my-2 md:my-4 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <TextGenerateEffect
             words={
@@ -43,11 +44,9 @@ const Hero = () => {
             }
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
-          <p className="w-[75%] text-center md:tracking-wider mb-8 mt-8 text-sm md:text-lg lg:text-2xl leading-7">
+          <p className="w-[75%] text-center md:tracking-wider mb-8 mt-4 text-sm md:text-lg lg:text-2xl leading-7">
             Hi! I&apos;m Cody, an experienced <span className="text-green"> Developer </span> with expertise in all of the best practices in <span className="text-green"> DevOps </span> Engineering
           </p>
-
-
           <MagicButton
             title="Resume"
             icon={<FiDownload />}
