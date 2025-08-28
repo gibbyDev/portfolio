@@ -8,7 +8,7 @@ import {
   ModalTrigger,
 } from "./ui/animated-modal";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export function AnimatedModalDemo() {
   const images = [
