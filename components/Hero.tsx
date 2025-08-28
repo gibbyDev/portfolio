@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import MagicButton from "./MagicButton";
-import { AnimatedModalDemo } from "./AnimatedModalDemo";
+// import { AnimatedModalDemo } from "./AnimatedModalDemo";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { FiDownload } from "react-icons/fi";
 
 const Hero = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="h-[100vh] pb-20 pt-36">
@@ -44,15 +44,15 @@ const Hero = () => {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
           <p className="w-[75%] text-center md:tracking-wider mb-8 mt-8 text-sm md:text-lg lg:text-2xl leading-7">
-          Hi! I&apos;m Cody, an experienced <span className="text-green"> Developer </span> with expertise in all of the best practices in <span className="text-green"> DevOps </span> Engineering
+            Hi! I&apos;m Cody, an experienced <span className="text-green"> Developer </span> with expertise in all of the best practices in <span className="text-green"> DevOps </span> Engineering
           </p>
 
-          
-            <MagicButton
-              title="Resume"
-              icon={<FiDownload />}
-              position="right"
-            />
+
+          <MagicButton
+            title="Resume"
+            icon={<FiDownload />}
+            position="right"
+          />
         </div>
       </div>
     </div>
