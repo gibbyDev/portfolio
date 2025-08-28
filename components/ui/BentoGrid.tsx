@@ -94,7 +94,7 @@ export const BentoGridItem = ({
             <img
               src={spareImg}
               alt={spareImg}
-              //   width={220}
+                width={220}
               className="object-cover object-center w-full h-full"
             />
           )}
@@ -104,13 +104,10 @@ export const BentoGridItem = ({
             <div className="absolute z-0 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           </BackgroundGradientAnimation>
         )}
+                {id === 1 && (
+            <div className="absolute z-10 bg-gradient-to-t from-black via-black-200 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+        )}
 
-        {id === 1 && (
-          <div className="absolute inset-0 bg-gradient-to-tr from-black to-transparent z-10 pointer-events-none"></div>
-        )}
-        {id === 2 && (
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
-        )}
         {id === 3 && (
           <BackgroundGradientAnimation>
             <div className="absolute z-0 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
