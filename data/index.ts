@@ -14,7 +14,7 @@ export const gridItems = [
     imgClassName:
       "z-50 w-full h-full bg-gradient-to-tr from-black to-transparent",
     titleClassName: "justify-end",
-    img: "/me.png",
+    img: "/portfolio/me.png",
     spareImg: "",
   },
   {
@@ -24,7 +24,7 @@ export const gridItems = [
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
-    img: "/pngegg (1).png",
+    img: "/portfolio/pngegg (1).png",
     spareImg: "",
   },
   {
@@ -44,7 +44,7 @@ export const gridItems = [
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
-    img: "/grid.svg",
+    img: "/portfolio/grid.svg",
     spareImg: "/b4.svg",
   },
 
@@ -55,8 +55,8 @@ export const gridItems = [
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
+    img: "/portfolio/b5.svg",
+    spareImg: "/portfolio/grid.svg",
   },
   {
     id: 6,
@@ -108,41 +108,41 @@ export const companies = [
   {
     id: 2,
     name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
+    img: "/portfolio/app.svg",
+    nameImg: "/portfolio/appName.svg",
   },
   {
     id: 3,
     name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
+    img: "/portfolio/host.svg",
+    nameImg: "/portfolio/hostName.svg",
   },
   {
     id: 4,
     name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
+    img: "/portfolio/s.svg",
+    nameImg: "/portfolio/streamName.svg",
   },
   {
     id: 5,
     name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
+    img: "/portfolio/dock.svg",
+    nameImg: "/portfolio/dockerName.svg",
   },
 ];
 
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg",
+    img: "/portfolio/git.svg",
     link: "github.com/gibbyDev",
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/portfolio/twit.svg",
   },
   {
     id: 3,
-    img: "/link.svg",
+    img: "/portfolio/link.svg",
   },
 ];
