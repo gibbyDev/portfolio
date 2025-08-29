@@ -12,7 +12,7 @@ export const gridItems = [
     className:
       "z-10 lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[70vh] bg-gradient-to-tr from-black to-transparent",
     imgClassName:
-      "z-50 w-full h-full bg-gradient-to-tr from-black/60 to-transparent",
+      "z-50 w-full h-full bg-gradient-to-t from-black/70 via-transparent to-transparent",
     titleClassName: "justify-end",
     img: "/portfolio/me.png",
     spareImg: "",
@@ -22,7 +22,7 @@ export const gridItems = [
     title: "I'm constantly updating my tech stack and infrastructure",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
+    imgClassName: "z-50 w-full h-full bg-gradient-to-t from-black/70 via-transparent to-transparent",
     titleClassName: "justify-start",
     img: "/portfolio/pngegg (1).png",
     spareImg: "",
