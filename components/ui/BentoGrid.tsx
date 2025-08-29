@@ -104,8 +104,8 @@ export const BentoGridItem = ({
             <div className="absolute z-0 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           </BackgroundGradientAnimation>
         )}
-                {id === 1 && (
-            <div className="absolute z-10 bg-gradient-to-t from-black via-black-200 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+         {id === 1 && (
+            <div className="absolute z-10 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
         )}
 
         {id === 3 && (

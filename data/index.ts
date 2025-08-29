@@ -12,7 +12,7 @@ export const gridItems = [
     className:
       "z-10 lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[70vh] bg-gradient-to-tr from-black to-transparent",
     imgClassName:
-      "z-50 w-full h-full bg-gradient-to-tr from-black to-transparent",
+      "z-50 w-full h-full bg-gradient-to-tr from-black/60 to-transparent",
     titleClassName: "justify-end",
     img: "/portfolio/me.png",
     spareImg: "",
@@ -135,11 +135,12 @@ export const socialMedia = [
   {
     id: 1,
     img: "/portfolio/git.svg",
-    link: "github.com/gibbyDev",
+    link: "https://github.com/gibbyDev",
   },
   {
     id: 2,
-    img: "/portfolio/twit.svg",
+    img: "/portfolio/youtube.svg",
+    link: "https://www.youtube.com/@codygibbs7288",
   },
   {
     id: 3,
