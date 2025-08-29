@@ -42,7 +42,7 @@ const config = {
           100: "rgb(197, 184, 7)",
         },
         green: "#108A00",
-        border: "hsl(var(--border))",
+        border: "#161616",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",

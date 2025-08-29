@@ -44,9 +44,9 @@ const Hero = () => {
             }
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
-          <p className="w-[75%] text-center md:tracking-wider mb-8 mt-4 text-sm md:text-lg lg:text-2xl leading-7">
+          {/* <p className="w-[75%] text-center md:tracking-wider mb-8 mt-4 text-sm md:text-lg lg:text-2xl leading-7">
             Hi! I&apos;m Cody, an experienced <span className="text-green"> Developer </span> with expertise in all of the best practices in <span className="text-green"> DevOps </span> Engineering
-          </p>
+          </p> */}
           <MagicButton
             title="Resume"
             icon={<FiDownload />}
