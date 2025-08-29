@@ -139,7 +139,7 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: "/portfolio/youtube.svg",
+    img: "/portfolio/twit.svg",
     link: "https://www.youtube.com/@codygibbs7288",
   },
   {
