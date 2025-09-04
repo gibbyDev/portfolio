@@ -54,7 +54,7 @@ const Hero = () => {
             handleClick={() => {
               const link = document.createElement("a");
               link.href = "/portfolio/data/resume.pdf";
-              link.download = "resume.pdf";
+              link.download = "/portfolio/data/resume.pdf";
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);
