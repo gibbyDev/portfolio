@@ -14,7 +14,7 @@ export const gridItems = [
     imgClassName:
       "z-50 w-full h-full bg-gradient-to-tr from-black via-transparent to-transparent",
     titleClassName: "justify-end",
-    img: "/portfolio/me.png",
+    img: "/me.png",
     spareImg: "",
   },
   {
@@ -24,7 +24,7 @@ export const gridItems = [
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "z-50 w-full h-full bg-gradient-to-t from-black/70 via-transparent to-transparent",
     titleClassName: "justify-start",
-    img: "/portfolio/pngegg (1).png",
+    img: "/pngegg (1).png",
     spareImg: "",
   },
   {
@@ -44,8 +44,8 @@ export const gridItems = [
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
-    img: "/portfolio/grid.svg",
-    spareImg: "/portfolio/b4.svg",
+    img: "/grid.svg",
+    spareImg: "/b4.svg",
   },
 
   {
@@ -55,8 +55,8 @@ export const gridItems = [
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/portfolio/b5.svg",
-    spareImg: "/portfolio/grid.svg",
+    img: "/b5.svg",
+    spareImg: "/grid.svg",
   },
   {
     id: 6,
@@ -108,42 +108,42 @@ export const companies = [
   {
     id: 2,
     name: "appwrite",
-    img: "/portfolio/app.svg",
-    nameImg: "/portfolio/appName.svg",
+    img: "/app.svg",
+    nameImg: "//appName.svg",
   },
   {
     id: 3,
     name: "HOSTINGER",
-    img: "/portfolio/host.svg",
-    nameImg: "/portfolio/hostName.svg",
+    img: "/host.svg",
+    nameImg: "//hostName.svg",
   },
   {
     id: 4,
     name: "stream",
-    img: "/portfolio/s.svg",
-    nameImg: "/portfolio/streamName.svg",
+    img: "/s.svg",
+    nameImg: "//streamName.svg",
   },
   {
     id: 5,
     name: "docker.",
-    img: "/portfolio/dock.svg",
-    nameImg: "/portfolio/dockerName.svg",
+    img: "/dock.svg",
+    nameImg: "//dockerName.svg",
   },
 ];
 
 export const socialMedia = [
   {
     id: 1,
-    img: "/portfolio/git.svg",
+    img: "/git.svg",
     link: "https://github.com/gibbyDev",
   },
   {
     id: 2,
-    img: "/portfolio/twit.svg",
+    img: "/twit.svg",
     link: "https://www.youtube.com/@codygibbs7288",
   },
   {
     id: 3,
-    img: "/portfolio/link.svg",
+    img: "/link.svg",
   },
 ];
