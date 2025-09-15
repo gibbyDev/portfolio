@@ -25,9 +25,6 @@ jobs:
       - name: Build static site
         run: npm run build
 
-      - name: Export static site
-        run: npm run export
-
       - name: Verify out folder contents
         run: ls -lah ./out # ✅ Debug step to confirm export worked
 
