@@ -11,12 +11,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20 # ✅ Use Node 20 (Next.js 14+ recommended)
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -27,6 +28,9 @@ jobs:
       - name: Export static site
         run: npm run export
 
+      - name: Verify out folder contents
+        run: ls -lah ./out # ✅ Debug step to confirm export worked
+
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -35,3 +39,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /public_html/
           local-dir: ./out/
+          protocol: ftp
+          # port: 2121 # Uncomment if Hostinger gave you a custom port
